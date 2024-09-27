@@ -22,10 +22,10 @@ app.get("/student/:id", (req, res) => {
 });
 
 // Serve static files from the React build folder
-app.use(express.static(path.join(__dirname, "/build")));
+app.use(express.static(path.join(__dirname, "build")));
 // Serve the React app for any other routes
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/build/index.html"));
+  res.sendFile(path.join(__dirname, "build/index.html"));
 });
 
 app.listen(5000, () => {
